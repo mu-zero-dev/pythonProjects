@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from models import db, User, Account, Transaction
+from werkzeug.utils import secure_filename  # Update this import
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///prepaid.db'
